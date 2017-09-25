@@ -1,0 +1,643 @@
+/*********************************************************
+	
+	CLASSES GERAIS
+
+*********************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Signika', sans-serif;
+	font-weight: 500;
+}
+header {
+	width: 100%;
+	float: left;
+}
+h2.titulo-verde {
+	background: #17A64A;
+	margin: 30px auto 60px;
+	padding: 25px 30px 20px;
+	display: table;
+	clear: both;
+	font-size: 45px;
+	text-transform: uppercase;
+	text-align: center;
+	float: inherit;
+	color: #FFFFFF;
+	font-weight: 900;
+	border: 3px solid #FFF;
+	box-shadow: 0px 0px 0px 4px #17A64A;
+}
+thead {
+	display: none;
+}
+tbody tr {
+	margin-bottom: 30px;
+}
+.publicidade img {
+	max-width: 100%;
+}
+footer {
+	width: 100%;
+	float: left;
+	padding: 10px 0;
+	background: #DDDDDD;
+}
+.paragrafo {
+	font-weight: 300;
+	font-size: 16px;
+}
+
+/*********************************************************
+	
+	TOPO SITE
+
+*********************************************************/
+.verde { background: #0D4C26; }
+.branco { background: #FFFFFF; }
+.azul-escuro { background: #22417F; padding: 30px 0; margin: 30px 0 0; }
+.azul-claro { background: #1079AA; padding: 30px 0; }
+.menu-principal { float: left; }
+.menu-principal a {
+	padding: 20px 10px;
+	float: left;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	outline: none;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+a.active {
+	background: #FFFFFF;
+	color: #0D4C26;
+}
+.menu-principal a:hover {
+	color: #0D4C26;
+	background: #FFFFFF;
+	text-decoration: none;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+a.anunciar-vaga {
+	float: right;
+	padding: 10px;
+	margin-top: 10px;
+	background: #F2B92E;
+	color: #FFFFFF;
+	outline: none;
+	text-transform: uppercase;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+a.anunciar-vaga:hover {
+	text-decoration: none;
+	background: #FFFFFF;
+	color: #0D4C26;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+a.logo-topo {
+	width: 100%;
+	height: 95px;
+	float: left;
+	padding: 10px 0;
+	outline: none;
+	background: url("../images/logo-topo-menor.png") center left no-repeat;
+
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+}
+.frase {
+	color: #0D4C26;
+	font-size: 23px;
+	float: right;
+	line-height: 95px;
+}
+
+/*********************************************************
+	
+	BANNER TOPO
+
+*********************************************************/
+
+.banner {
+	width: 100%;
+	float: left;
+	background: url("../images/banner-topo.png") top center no-repeat;
+}
+.banner img {
+	max-width: 100%;
+	margin: 0 auto;
+}
+.logo-topo-grande {
+	display: block;
+	margin: 0 auto;
+	padding: 10em 0 2em;
+}
+.logo-topo-menor {
+	padding: 2em 0;
+	max-width: 30% !important;
+}
+.anuncie-vaga {
+	padding: 20px 50px;
+	color: #FFFFFF;
+	margin: 0 auto 40px;
+	display: block;
+	text-transform: uppercase;
+	background: #F2B92E;
+	clear: both;
+	font-size: 45px;
+	text-align: center;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+.anuncie-vaga:hover {
+	text-decoration: none;
+	background: #0D4C26;
+	color: #FFFFFF;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+.centralizar {
+	margin: 0 auto;
+	float: inherit;
+}
+.diferenciais {
+	padding: 20px 0;
+	clear: both;
+}
+.diferenciais span {
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #FFFFFF;
+	font-size: 70px;
+	text-align: center;
+	display: block;
+}
+.diferenciais h2,
+.diferenciais p {
+	color: #FFF;
+	text-align: center;
+	margin: 0;
+	padding: 10px 0;
+	font-size: 27px;
+	font-weight: 900;
+}
+.diferenciais p {
+	font-weight: 300;
+	font-size: 17px;
+}
+.titulo-publicidade {
+	font-size: 12px;
+	color: #AAAAAA;
+}
+
+/*********************************************************
+	
+	PUBLICIDADES
+
+*********************************************************/
+
+.publicidade {
+	padding: 30px 0;
+	clear: both;
+	font-weight: 300;
+}
+.opacity {
+    width: 2000px;
+    height: 20000px;
+    display: none;
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:9999; /* makes sure it stays on top */
+}
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url("../images/spinner.gif"); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+    text-align: center;
+    color: #0D4C26;
+    font-weight: bold;
+}
+
+/*********************************************************
+	
+	DATATABLES
+
+*********************************************************/
+
+table#example tr {
+    padding-left: 0;
+    padding-right: 0;
+}
+tbody.ultimas-vagas td {
+	width: 100%;
+	float: left;
+	padding: 0 !important;
+	margin: 0;
+	color: #999999;
+	font-size: 16px;
+}
+tbody.ultimas-vagas td a {
+	width: 100%;
+	float: left;
+	color: #999999;
+}
+tbody.ultimas-vagas td .data {
+	width: 100%;
+	float: left;
+	color: #999999;
+	font-weight: 300;
+	font-size: 14px;
+}
+tbody.ultimas-vagas td strong {
+	color: #17A64A;
+	font-size: 16px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+/*********************************************************
+	
+	NEWSLETTER
+
+*********************************************************/
+
+.titulo-news {
+	background: url("../images/icon-message.png") left center no-repeat;
+	font-size: 31px;
+	font-weight: 900;
+	color: #FFFFFF;
+	padding-left: 110px;
+}
+form.form-news {
+	width: 100%;
+	float: left;
+}
+.form-news input[type=text],
+.form-news input[type=email] {
+	width: 100%;
+	float: left;
+	border: none;
+	padding: 24px;
+	font-weight: 500;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+.form-news input[type=text]:hover,
+.form-news input[type=email]:hover,
+.form-news input[type=text]:focus,
+.form-news input[type=email]:focus {
+	background: #E0F3FC;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+.form-news input[type=submit] {
+	width: 100%;
+	float: left;
+	border: none;
+	padding: 24px;
+	background: #1079AA;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+.form-news input[type=submit]:hover {	
+	background: #FFFFFF;
+	color: #1079AA;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+
+/*********************************************************
+	
+	LISTAGEM DE CIDADES
+
+*********************************************************/
+
+h2.titulo-cidades {
+	width: 100%;
+	float: left;
+	color: #FFFFFF;
+	font-size: 31px;
+	font-weight: 900;
+}
+a.todas-cidades {
+	color: #F2B92E;
+	font-size: 16px;
+	padding: 20px 0 0;
+	float: left;
+}
+ul.list-cidades {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.list-cidades li a {
+	width: 100%;
+	float: left;
+	color: #FFFFFF;
+	font-weight: 300;
+	font-size: 16px;
+	padding: 3px;
+	outline: none;
+	overflow: hidden;
+}
+
+/*********************************************************
+	
+	RODAPE SITE
+
+*********************************************************/
+
+.logo-rodape img {
+	max-width: 100%;
+}
+.txt-rodape {
+	line-height: 35px;
+	text-align: center;
+	color: #21407F;
+}
+ul.list-midias {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ul.list-midias li,
+ul.list-midias li a {
+	width: 35px;
+	height: 35px;
+	float: right;
+}
+ul.list-midias li {
+	margin-left: 10px;
+}
+ul.list-midias li a {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	outline: none;
+	background: url(../images/midias.png) 0 0 no-repeat;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+ul.list-midias li a.twitter {	
+	background: url(../images/midias.png) -46px 0 no-repeat;
+}
+ul.list-midias li a:hover {
+	background: url(../images/midias.png) 0 -37px no-repeat;
+	-webkit-transition: background .5s ease;
+	-o-transition: background .5s ease;
+	transition: background .5s ease;
+}
+ul.list-midias li a.twitter:hover {	
+	background: url(../images/midias.png) -46px -37px no-repeat;
+}
+.col-md-style {
+	width: 10.5%;
+}
+.float-right {
+	float: right;
+}
+table#example tr.col-sm-6 {
+	padding: 0 5px;
+}
+
+/*********************************************************
+	
+	FORMULÁRIOS
+
+*********************************************************/
+
+form.form-cadastro {
+	width: 100%;
+}
+form.form-cadastro input[type=text],
+form.form-cadastro input[type=email] {
+	width: 100%;
+	font-weight: 300;
+	padding: 25px 10px;
+	border: 1px solid #BBBBBB;
+	border-bottom: 3px solid #BBBBBB;
+	margin-bottom: 30px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border .5s ease;
+	-o-transition: border .5s ease;
+	transition: border .5s ease;
+}
+form.form-cadastro input[type=text]:focus,
+form.form-cadastro input[type=email]:focus,
+form.form-cadastro input[type=text]:hover,
+form.form-cadastro input[type=email]:hover {
+	border-color: #17A64A;
+	-webkit-transition: border .5s ease;
+	-o-transition: border .5s ease;
+	transition: border .5s ease;
+}
+.btn-cadastrar-vaga {
+	width: 100%;
+	font-size: 18px;
+	padding: 15px 20px;
+	text-transform: uppercase;
+	border: none;
+	font-weight: 500;
+	background: #17A64A;
+	color: #FFFFFF;
+	border-bottom: 3px solid #0D4C26;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.btn-cadastrar-vaga:hover {
+	background: #0D4C26;
+	border-bottom: 3px solid #17A64A;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+/*********************************************************
+	
+	VIEW VAGAS
+
+*********************************************************/
+
+h2.nome-empresa {
+	font-weight: 900;
+}
+h3.nome-cidade {
+	color: #AAAAAA;
+	font-weight: 500;
+	font-size: 14px;
+}
+h4.titulo {
+	margin: 30px 0 20px;
+	font-weight: 900;
+}
+ul.list-descricao {
+	margin: 0;
+	padding: 0 0 0 15px;
+}
+ul.list-descricao li {
+	font-weight: 300;
+}
+h4.ajustar-titulo {
+	margin-bottom: 10px;
+}
+h5.responsavel {
+	color: #17A64A;
+	font-weight: 500;
+	font-size: 16px;
+}
+h5.responsavel strong,
+h5.responsavel strong a {
+	font-weight: 300;
+	color: #AAAAAA;
+	-webkit-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	transition: color .5s ease;
+}
+h5.responsavel strong a:hover {
+	color: #17A64A;
+	text-decoration: none;
+	-webkit-transition: color .5s ease;
+	-o-transition: color .5s ease;
+	transition: color .5s ease;
+}
+.btn-enviar-curriculo {
+	width: 100%;
+	font-size: 18px;
+	float: left;
+	text-align: center;
+	padding: 15px 20px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	border: none;
+	font-weight: 500;
+	background: #17A64A;
+	color: #FFFFFF;
+	border-bottom: 3px solid #0D4C26;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+.btn-enviar-curriculo:hover {
+	background: #0D4C26;
+	color: #FFFFFF;
+	text-decoration: none;
+	border-bottom: 3px solid #17A64A;
+	-webkit-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+/*********************************************************
+	
+	MEDIAS QUERIES
+
+*********************************************************/
+
+@media screen and (max-width: 1200px) {
+	.titulo-news { font-size: 25px; min-height: 70px; }
+	ul.list-cidades li a { font-size: 15px; }
+	.anuncie-vaga { font-size: 35px; }
+}
+@media screen and (max-width: 995px) {
+	.frase { font-size: 22px; }
+	.margin-bottom { margin-bottom: 30px; }
+	.form-news input[type="text"],
+	.form-news input[type="email"] {
+		margin-bottom: 20px;
+	}
+	.form-news input[type="text"] {
+		margin-top: 20px;
+	}
+	.titulo-news { font-size: 40px; }
+	ul.list-cidades { clear: both; margin-top: 20px; }
+	a.todas-cidades { float: right; }
+	h2.titulo-cidades { width: auto; }
+	.col-md-style { width: 18.5%; }
+}
+@media screen and (max-width: 750px) {
+	.col-sm-6 { width: 50%; float: left; }
+	.col-sm-6 label { float: left; }
+	tbody.ultimas-vagas td { text-align: left; }
+	#example_paginate { clear: both; }
+	.azul-escuro { margin: 0; }
+	ul.list-cidades { float: left; }
+}
+@media screen and (max-width: 735px) {
+	.frase { font-size: 15px; }
+}
+@media screen and (max-width: 695px) {
+	.col-md-8.col-sm-7.col-xs-7.txt-rodape { width: 53%; }
+	.col-md-2.col-sm-2.col-xs-2.float-right { width: 28%; }
+	.col-md-3.col-sm-3.col-xs-3 { width: 33.33333%; }
+	.display-none { display: none; }
+	.col-md-4.col-xs-4.margin-bottom { width: 50%; }
+}
+@media screen and (max-width: 655px) {
+	.col-md-3.col-sm-4.col-xs-4 { width: 40%; }
+	.col-md-9.col-sm-8.col-xs-8 { width: 60%; }
+	.display-none-450 { display: none; }
+	.publicidade-450 { width: 100%; margin-bottom: 0; }
+	.col-md-4.col-xs-4.margin-bottom { width: 100%; margin-bottom: 0; }
+	.segunda-publicidade-oculta { display: none; }
+}
+@media screen and (max-width: 560px) {
+	.frase { display: none; }
+	.col-md-3.col-sm-4.col-xs-4 { width: 100%; }
+	h2.titulo-verde { margin-top: 0; font-size: 30px; }
+}
+@media screen and (max-width: 450px) {
+	.anuncie-vaga { font-size: 35px; }
+	.titulo-news { font-size: 28px; }
+	.col-md-style { display: none; }
+	.col-md-8.col-sm-7.col-xs-7.txt-rodape { width: 55%; }
+	.col-md-3.col-sm-3.col-xs-3 { width: 50%; }
+}
+@media screen and (max-width: 436px) {
+	a.anunciar-vaga { display: none; }
+	table#example tr.col-sm-6 { width: 100%; }
+}
